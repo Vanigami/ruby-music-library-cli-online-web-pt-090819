@@ -2,9 +2,8 @@ class MusicLibraryController
   
   def initialize(path = "./db/mp3s")
     MusicImporter.new(path).import 
-  end
-  
-  def call 
+
+ def call 
     input = ""
     
     while input != "exit"
@@ -89,4 +88,3 @@ class MusicLibraryController
     puts "Playing #{song.name} by #{song.artist.name}" if song
   end
 end
-    
